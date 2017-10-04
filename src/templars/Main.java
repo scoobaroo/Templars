@@ -85,10 +85,9 @@ public class Main {
         		Perms.add(array);
         }
         System.out.println(Perms.size());
-//        for(int[] per: Perms) {
-//            m.solveEverything(per, cipherArray);
-//    			System.out.println();
-//        }
+        for(int[] per: Perms) {
+            m.solveEverything(per, cipherArray);
+        }
 
         //since first 7 letters are ydonoaT you can guess that today is the first 5 letters
         //given that today is the first 5 letters, there are only 4 choices as key:
@@ -112,12 +111,7 @@ public class Main {
 			map.put(i+1,characters[i]);
 		}
 		char[] newchars = new char[8];
-		System.out.println(map);
-		printArray(key);
-		System.out.println();
-		System.out.println(map.get(key[0]));
 		for(int j = 0; j< key.length; j++) {
-			System.out.println(key[j]);
 			newchars[j]= map.get(key[j]);
 		}
 		rearrangedString = String.valueOf(newchars);
